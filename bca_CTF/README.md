@@ -1,5 +1,5 @@
 ## This was the first CTF I acutally had time to partiipate in
-# At the end of the competition my one man team placed 24th in the US Middle/High School Division and i was very happy with this
+# At the end of the competition my one man team placed 24th in the US Middle/High School Division and I was very happy with this
 ![image](https://user-images.githubusercontent.com/77011982/122475719-1090cf80-cf93-11eb-944c-db08f17a1804.png)
 
 Overall these challenges were nice to see and I had to recreate many of my old scripts because I forgot to make a backup of them after I installed arch (btw I use arch)
