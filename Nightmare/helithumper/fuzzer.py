@@ -2,7 +2,7 @@ from pwn import *
 from string import ascii_letters, digits, punctuation
 alphabet = list(ascii_letters+ digits+ punctuation)
 alphabet
-flag = ''
+flag = 'f'
 # Fuzz each character of the flag and build it up
 while flag[-1] != '}':
     for ch in alphabet:
