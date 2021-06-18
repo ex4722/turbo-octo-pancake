@@ -1,0 +1,1 @@
+These challenges are a collection of pwn challenges to teach beginers the basics. ALl of the challenges(and a better writeup) can be found guyinatuxedo's github repo at https://github.com/guyinatuxedo/nightmare
