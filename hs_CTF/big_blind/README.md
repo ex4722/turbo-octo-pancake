@@ -12,6 +12,10 @@ I spent a long time trying to get the payload to work and on the last day of the
 ' OR (SELECT substr(pass,1,{len(value)+1})='{value + chr}' AND SLEEP(4))"
 ```
 
+Anyways the code worked just fine and after running the code we are rewarded with the flag
+![image](https://user-images.githubusercontent.com/77011982/122654255-33002580-d118-11eb-8d1e-964011ecda26.png)
+
+
 
 However, the better payload would be the one payload on payload all the things that I didn't try
 ```SQL
@@ -24,3 +28,8 @@ After modifications, the payload should be more like
 ```
 
 Both of these would work but I still have no idea why the first one would work. 
+
+
+``
+flag{any_info_is_good_info}
+``
