@@ -1,0 +1,15 @@
+   
+
+
+
+
+
+   Stack                    Address
+   ----- Stack Pointer 
+   user_inp                 BP-6                         
+   flag                     BP-5                      
+   out_put                  BP-4                       
+   local_c                  BP-3                            
+   local_res                BP-2                              
+   Param_1                  BP-1                                        
+   ------ Base Pointer      BP 
