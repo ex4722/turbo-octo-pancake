@@ -6,6 +6,7 @@ Sometimes we know which function we want to jump to because they will give us a 
 ```bash 
 objdump -d <binary name> | grep <Func Name>
 ```
+
 EX: In csaw18_geit we can run the following command to get the address of the function. 
 ```bash 
  ~/turbo-octo-pancake/N/s/r/csaw18_gedit    main  objdump -d get_it| grep shell 
@@ -14,6 +15,7 @@ EX: In csaw18_geit we can run the following command to get the address of the fu
 ## How to find offset for overflow
 
 This differs depending on what you are trying to do but this technique works most of the time. First, we open the file in gdb and then enter in a recognizable string to find. Once the program breaks as can use search-pattern to find the address of that string on the stack. Then we run info frame to find the address that the instruction pointer points to. We then subtract the two values to find the offset 
+
 EX: Csaw18_Getit- Offset is 0x28
 ```gdb
 gef➤  disassemble main
