@@ -6,7 +6,7 @@
 #### Provided Files: ring_of_saturn,ring_of_saturn_dbg,libc.so.6
 
 ## tl;dr 
-Heap Overflow->Change Chunk Size->Overlapping Chunks->Tcache Posin->Allocate chunk near free_hook->SHELL
+Heap Overflow->Change Chunk Size->Overlapping Chunks->Tcache Poison->Allocate chunk near free_hook->SHELL
 
 First time doing a writeup for heap challenges so let's add the \-vvv flag
  
