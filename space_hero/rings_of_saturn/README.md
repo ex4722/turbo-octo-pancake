@@ -72,7 +72,7 @@ Much of this writeup will not make any sense if you don't know much about how th
 
 
 
-This youtube playlist by [pwn colege](https://www.youtube.com/watch?v=coAJ4KyrWmY&list=PL-ymxv0nOtqoUdeKoKMxZBlfd9pD3mAah) was the one I started with. 
+This youtube playlist by [pwn college](https://www.youtube.com/watch?v=coAJ4KyrWmY&list=PL-ymxv0nOtqoUdeKoKMxZBlfd9pD3mAah) was the one I started with. 
 This one by [azeria labs](https://azeria-labs.com/heap-exploitation-part-1-understanding-the-glibc-heap-implementation/) and this one by [dhavalkapil](https://heap-exploitation.dhavalkapil.com/introduction) are also great starting points.
 
 I will provide the bare minimum needed to solve this challenge but I will assume the reader already read some of the supplementary material 
