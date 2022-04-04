@@ -332,7 +332,6 @@ This was probably the hardest part for me. After getting an arbitrary write prim
 - To minimize writing I freed all possible chunks leaving  only the free_hook and chunk2 ( could not free this ) 
 
 ```python 
-free(1)
 dummy = malloc(1000) 
 hook = malloc(1000)
 
