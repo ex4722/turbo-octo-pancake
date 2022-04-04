@@ -468,7 +468,7 @@ One_gadget in malloc_hook fails but free works, stupid locks
 ```
 
 
-Running the exploit now on the shell server gives us the flag:
+Running the exploit on the netcat connection gives us the flag:
 
 ![image](https://user-images.githubusercontent.com/77011982/161623091-2b4ca241-ba0e-4905-bb23-62f971757a6a.png)
 
