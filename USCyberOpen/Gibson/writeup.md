@@ -152,10 +152,13 @@ Using this we can map most of the instructions in main to fit this execution flo
 
 <h2>BUGS</h2>
 Usually, in x84 the stack pointer is decremented at the start of each function to make space for local variables. Noticed how 1192 is subtracted from r15 (the stack pointer) at the beginning of the main function
+
 ```
  1000836:       e3 f0 fb 58 ff 71       lay     %r15,-1192(%r15)
 ```
+
 This means that the stack buffer is probably around that size but the call to read seems to have 2000 as a parameter. Hence we have a buffer overflow!
+
 ```
  10008ba:       a7 49 07 d0             lghi    %r4,2000
  10008be:       b9 04 00 31             lgr     %r3,%r1
@@ -164,6 +167,7 @@ This means that the stack buffer is probably around that size but the call to re
 ```
 
 Printf takes in a buffer instead of a format string. This means that our input transformed will be passed directly to printf. The transformation does not seem too fancy as theirs an one-to-one mapping. This means its either adding a value or XORing out input
+
 ```
  1000924:       b9 04 00 21             lgr     %r2,%r1
  1000928:       c0 e5 ff ff fe 76       brasl   %r14,1000614 <printf@plt>               ; printf(buffer)
