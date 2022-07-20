@@ -287,8 +287,9 @@ EXPLOIT STEPS:
 
 Eventually I got it working locally but on the remote instance, it didn't. I could not figure out what was going on and then I found out that most people had an exploit that worked most of the time so I decided to rewrite my exploit. After solving it I realized that this approach WOULD work but I was leaking libc wrong.
 
-Most of the time the libc base was wrong or it segfaulted upon connection but running this in a loop eventually worked. After a couple more submissions I found out that my exploit never worked. I thought it was just luck but after some time I found out that most people used an exploit that worked almost 100% of the time. At this point, I decided to rewrite this exploit for it to be more stable. After the competition, I found out that this idea would work but I was leaking values incorrectly. The stacks always shifting so the %p on my machine might not be the same on remote. 
+Most of the time the libc base was wrong or it segfaulted upon connection but running this in a loop eventually worked. After a couple more submissions I found out that my exploit never worked. I thought it was just luck but after some time I found out later that most people used an exploit that worked almost 100% of the time. 
 
+At this point, I was kinda bummed out cause I had submitted at least 10 exploits and each one ran for a while. Shoutout to tj_oconnor for being a great admin as he ran all of them without complaining. He went above and beyond by providing me logs and was the reason I even attempted 2. I decided to rewrite this exploit to not rely on aslr. After the competition, I found out that this idea would work but I was leaking values incorrectly. The stacks always shifting so the %p on my machine might not be the same on the remote. 
 
 **Attempt 2** 
 Relying on alsr was not a good exploit attempt. I didn't want to ROP as I was hoping to avoid learning the architecture but this was inevitable. After examining various functions it seems that many functions have this epilogue.
@@ -359,7 +360,7 @@ FINAL EXPLOIT STEPS:
 - Format String to move "/bin/sh" into .bss
 - ROP using a gadget to "pop r2" and system
 
-At this point, I had a super reliable exploit locally but on remote, it didn't work again. At this point, there were a couple of hours of the CTF left and I was freaking out. After opening a ticket I realized that my libc addresses were wrong. Nothing made sense until I got a IP to connect to and I checked the value at libc base. To my surprise, it was not "ELF" instead it was some massive chunk of bytes. At this point, I realized that using %p to leak stack values is not a good idea as the stack shifts a lot. Instead, I used the format string to leak the GOT. After this, my exploit worked!! 
+At this point, I had a super reliable exploit locally but on remote, it didn't work again. At this point, there were a couple of hours of the CTF left and I was freaking out. Nothing made sense until I had the bright idea to check if libc base was correct by printing out the value there. To my surprise, it was not "ELF" instead it was some massive chunk of bytes. At this point, I realized that using %p to leak stack values is not a good idea as the stack shifts a lot. Instead, I used the format string to leak the GOT. After this, my exploit worked!! 
 
 ![image](https://user-images.githubusercontent.com/77011982/180006920-5cef3139-bd68-42b4-b59c-c69bf0acc4ec.png)
 
